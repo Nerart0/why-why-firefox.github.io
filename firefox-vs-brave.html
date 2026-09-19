@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Firefox vs Brave</title>
+<style>
+  :root{
+    --paper: #fbf0d9;
+    --ink: #2e2118;
+    --rust: #d1531f;
+    --moss: #4f6b3a;
+    --sky: #2e6f8e;
+    --pin: #b5382e;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background: var(--paper);
+    background-image:
+      radial-gradient(circle at 15% 25%, rgba(0,0,0,0.03) 0, transparent 3px),
+      radial-gradient(circle at 75% 60%, rgba(0,0,0,0.03) 0, transparent 3px),
+      radial-gradient(circle at 40% 85%, rgba(0,0,0,0.03) 0, transparent 3px);
+    background-size: 300px 300px;
+    color: var(--ink);
+    font-family: "Comic Sans MS", "Chalkboard SE", "Marker Felt", sans-serif;
+    line-height: 1.6;
+  }
+  .wrap{ max-width: 780px; margin: 0 auto; padding: 0 20px 70px; }
+
+  .title-block{
+    padding: 50px 10px 20px;
+    text-align: left;
+  }
+  .title-block h1{
+    font-size: clamp(1.9rem, 6vw, 2.7rem);
+    margin: 0 0 14px;
+    display: inline-block;
+    transform: rotate(-1.2deg);
+    color: var(--pin);
+  }
+  .title-block h1 .underline{
+    position: relative;
+  }
+  .title-block h1 .underline::after{
+    content:"";
+    position:absolute;
+    left:-4px; right:-4px; bottom:2px;
+    height: 10px;
+    background: #ffd35c;
+    z-index: -1;
+    transform: rotate(-1deg);
+  }
+  .title-block p{
+    max-width: 55ch;
+    font-size: 1.08rem;
+  }
+
+  .critter-corner{
+    float: right;
+    font-size: 4.5rem;
+    line-height: 1;
+    margin: 0 0 12px 16px;
+  }
+
+  h2.section-title{
+    font-size: 1.4rem;
+    margin: 46px 0 26px;
+    color: var(--moss);
+    border-bottom: 3px dotted var(--moss);
+    display: inline-block;
+    padding-bottom: 4px;
+  }
+
+  .note{
+    background: #fffdf5;
+    border: 2px solid var(--ink);
+    border-radius: 3px;
+    padding: 22px 24px 20px;
+    margin: 0 0 38px;
+    position: relative;
+    box-shadow: 3px 4px 0 rgba(46,33,24,0.5);
+  }
+  .note:nth-child(odd){ transform: rotate(-0.6deg); }
+  .note:nth-child(even){ transform: rotate(0.5deg); margin-left: 18px; }
+
+  .pin{
+    position:absolute;
+    top: -12px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--pin);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.4);
+  }
+  .note:nth-child(odd) .pin{ left: 28px; }
+  .note:nth-child(even) .pin{ right: 28px; }
+
+  .note h3{
+    margin: 4px 0 12px;
+    font-size: 1.2rem;
+    color: var(--rust);
+  }
+  .note p{ margin: 0 0 10px; max-width: 62ch; }
+  .note p:last-child{ margin-bottom: 0; }
+
+  .scrap{
+    border: 2px dashed var(--sky);
+    background: #eef7fa;
+    padding: 20px 22px;
+    margin: 40px 0 10px 8px;
+    transform: rotate(0.4deg);
+  }
+  .scrap h3{ margin: 0 0 12px; color: var(--sky); }
+  .scrap ul{ margin: 0; padding-left: 20px; }
+  .scrap li{ margin-bottom: 8px; }
+
+  .closing{
+    margin-top: 50px;
+    padding: 18px 4px 0;
+    font-size: 1.05rem;
+    border-top: 3px solid var(--ink);
+  }
+
+  @media (max-width: 560px){
+    .note:nth-child(even){ margin-left: 0; }
+    .critter-corner{ font-size: 3.2rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <div class="title-block">
+    <span class="critter-corner">🦊</span>
+    <h1><span class="underline">Firefox vs Brave</span></h1>
+    <p>Brave blocks ads right out of the box, and that is worth something. But who runs a browser and how they make money matters over the long haul. Here are five reasons Firefox wins on the things you do not notice at first glance.</p>
+  </div>
+
+  <h2 class="section-title">Five reasons</h2>
+
+  <div class="note">
+    <div class="pin"></div>
+    <h3>1. Nonprofit versus crypto token</h3>
+    <p>Mozilla, the company behind Firefox, is a nonprofit and has no business model built on selling your attention or on cryptocurrency. Its main funding comes from search engine deals and donations, not ads shown inside the browser itself.</p>
+    <p>Brave works differently. It earns money partly through its own ad system, Brave Ads, and a crypto token called BAT that users can collect and trade. That creates a strange loop, a browser marketed as your shield against ads ends up serving some itself, even if it is opt in and pays users a small cut.</p>
+    <p>For a lot of people this is a quiet but real trust issue. Once a company earns money from showing you ad content, its interests can start to drift from yours, even if it opens with strong privacy promises.</p>
+  </div>
+
+  <div class="note">
+    <div class="pin"></div>
+    <h3>2. Its own engine, not a borrowed one</h3>
+    <p>Firefox runs on its own rendering engine, called Gecko, which Mozilla has built and maintained for years. That keeps it technically independent from Google and free to make its own calls about how the browser behaves.</p>
+    <p>Brave, like Chrome, Edge, and Opera, is built on Chromium, the engine Google develops. When Google changes something at the core, like the Manifest V3 extension rules that limit how some ad blockers can work, that change reaches Brave too, whether its team agrees with it or not.</p>
+    <p>Engine diversity also matters for the wider web. The fewer browsers rely purely on one company's code, the harder it is for that company to set web standards unilaterally.</p>
+  </div>
+
+  <div class="note">
+    <div class="pin"></div>
+    <h3>3. Transparency of the organization</h3>
+    <p>Both browsers are open source, which is a good thing on its own, anyone can read the code. The difference sits in the structure of the organization behind the project and how decisions get made.</p>
+    <p>Mozilla operates as a nonprofit foundation with a stated mission around an open web, and its decisions largely happen in public, with input from the developer community. Brave Software Inc. is an ordinary tech company, and its business calls around the ad system and the BAT token tend to be made with less transparency, which raises questions for parts of the open source community.</p>
+  </div>
+
+  <div class="note">
+    <div class="pin"></div>
+    <h3>4. A more mature extension system</h3>
+    <p>Firefox has a much longer track record with its WebExtensions system and has kept broader support for older, more capable programming interfaces that extension developers rely on.</p>
+    <p>Because Brave is built on Chromium, it inherits the same restrictions Google places on extensions in that engine. Several developers of popular ad blockers have reported that newer Chromium rules limit how effective their tools can be, while Firefox stays more open to those older, flexible approaches.</p>
+  </div>
+
+  <div class="note">
+    <div class="pin"></div>
+    <h3>5. Telemetry control and trust history</h3>
+    <p>Firefox lets users manage in detail what telemetry data gets sent to Mozilla, and most of it can be switched off entirely in settings, laid out clearly in the company's privacy policy.</p>
+    <p>Brave generally protects users from third party tracking, but it has had a few notable trust incidents. The best known happened in 2020, when the browser automatically inserted its own affiliate links into certain crypto site addresses that users typed in manually, without their clear knowledge or consent. The issue was fixed quickly, but it left a mark on the company's reputation.</p>
+  </div>
+
+  <div class="scrap">
+    <h3>Fair is fair, where Brave wins</h3>
+    <ul>
+      <li>Ad and tracker blocking works right after install, no setup needed</li>
+      <li>Pages often load faster thanks to blocking handled at the engine level</li>
+      <li>Built in access to the Tor network in private windows, no extra tools required</li>
+    </ul>
+  </div>
+
+  <p class="closing">Short version, if independence from Google's ecosystem and avoiding a business conflict of interest matter to you, Firefox wins. If you want privacy out of the box without tinkering, and can live with more reliance on Chromium, Brave is the more convenient pick.</p>
+
+</div>
+
+</body>
+</html>
